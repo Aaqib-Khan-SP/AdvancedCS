@@ -1,5 +1,4 @@
-﻿using AdvancedCS.Concepts;
-using AdvancedCS.Core;
+﻿using Core.Interfaces;
 
 namespace AdvancedCS.PatternMatching.BasicPatterns
 {

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdvancedCS.Core
+namespace Core.Interfaces
 {
-    internal interface IRunnable
+    public interface IRunnable
     {
         public void Run();
     }

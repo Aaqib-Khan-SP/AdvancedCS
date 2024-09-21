@@ -4,10 +4,20 @@ namespace AdvancedCS.Concepts
 {
     public enum PatternMatching
     {
-        [Description("Basic patterns example")]
         BasicPatterns,
         RelationalPatterns,
         EnhancedSwitch,
         PositionalPatterns
     }
 }
+
+
+/*
+BasicPatterns
+
+
+
+Enhanced Switch:
+This is an example of enhanced switch
+
+*/

@@ -1,11 +1,11 @@
 ﻿using AdvancedCS.Concepts;
-using AdvancedCS.Core;
+using Core.Utilities;
 
 public class Program
 {
     public static void Main()
     {
+        ConceptRunner.Run(PatternMatching.BasicPatterns);
         ConceptRunner.Run(PatternMatching.EnhancedSwitch);
     }
-
 }
