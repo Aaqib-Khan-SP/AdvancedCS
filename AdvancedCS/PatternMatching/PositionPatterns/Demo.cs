@@ -6,7 +6,6 @@ namespace AdvancedCS.PatternMatching.PositionPatterns
     {
         public void Run()
         {
-            Console.WriteLine("NotImplemented");
             foreach (var (groupSize, date) in GetData())
             {
                 Console.WriteLine($"Discount offered for {groupSize} on {date}({date.DayOfWeek}) is " + GetDiscount(groupSize, date));
