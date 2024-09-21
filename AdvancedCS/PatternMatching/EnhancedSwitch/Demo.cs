@@ -1,4 +1,5 @@
-﻿using AdvancedCS.Core;
+﻿
+using Core.Interfaces;
 
 namespace AdvancedCS.PatternMatching.EnhancedSwitch
 {
