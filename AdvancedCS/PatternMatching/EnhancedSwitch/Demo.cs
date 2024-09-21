@@ -3,17 +3,17 @@ using Core.Interfaces;
 
 namespace AdvancedCS.PatternMatching.EnhancedSwitch
 {
-    public class Demo : IRunnable
+    internal class Demo : IRunnable
     {
         public static string ShapeToString(object shape) => shape switch
         {
-            "circle" => "sdfsd",
-            "add" => "fdfdf"
+            "Circle" => "This is a standard circle",
+            "Square" => "This is a standard square"
         };
 
         public void Run()
         {
-            Console.WriteLine(ShapeToString("circle"));
+            Console.WriteLine(ShapeToString("Circle"));
         }
     }
 }

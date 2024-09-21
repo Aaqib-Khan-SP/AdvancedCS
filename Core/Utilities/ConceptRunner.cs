@@ -1,35 +1,44 @@
-﻿namespace Core.Utilities
+﻿using System;
+using System.Reflection;
+
+namespace Core.Utilities
 {
     public static class ConceptRunner
     {
         public static void Run<TEnum>(TEnum concept) where TEnum : Enum
         {
             string conceptName = concept.ToString();
-
             string categoryName = typeof(TEnum).Name;
-
             string fullClassName = $"AdvancedCS.{categoryName}.{conceptName}.Demo";
 
-            Type demoType = Type.GetType(fullClassName);
+            Assembly assembly = Assembly.Load("AdvancedCS");
 
-            if (demoType != null)
+            if (assembly != null)
             {
-                var demoInstance = Activator.CreateInstance(demoType);
+                Type demoType = assembly.GetType(fullClassName);
 
-                var method = demoType.GetMethod("Run");
-
-                if (method != null)
+                if (demoType != null)
                 {
-                    method.Invoke(demoInstance, null);
+                    var demoInstance = Activator.CreateInstance(demoType);
+                    var method = demoType.GetMethod("Run");
+
+                    if (method != null)
+                    {
+                        method.Invoke(demoInstance, null);
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Method 'Run' not found in {fullClassName}");
+                    }
                 }
                 else
                 {
-                    Console.WriteLine($"Method 'Run' not found in {fullClassName}");
+                    Console.WriteLine($"Class '{fullClassName}' not found in assembly.");
                 }
             }
             else
             {
-                Console.WriteLine($"Class '{fullClassName}' not found.");
+                Console.WriteLine("Failed to load assembly.");
             }
         }
     }

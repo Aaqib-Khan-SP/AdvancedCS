@@ -7,5 +7,6 @@ public class Program
     {
         ConceptRunner.Run(PatternMatching.BasicPatterns);
         ConceptRunner.Run(PatternMatching.EnhancedSwitch);
+        ConceptRunner.Run(PatternMatching.PositionPatterns);
     }
 }

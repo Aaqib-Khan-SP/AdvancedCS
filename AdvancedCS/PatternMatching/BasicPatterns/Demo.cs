@@ -2,7 +2,7 @@
 
 namespace AdvancedCS.PatternMatching.BasicPatterns
 {
-    public class Demo : IRunnable
+    internal class Demo : IRunnable
     {
         public void Run()
         {
