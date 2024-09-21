@@ -1,6 +1,7 @@
 ﻿namespace Core.Models.Shapes
 {
-    internal class Circle
+    public class Circle
     {
+        public decimal Radius { get; set; }
     }
 }
