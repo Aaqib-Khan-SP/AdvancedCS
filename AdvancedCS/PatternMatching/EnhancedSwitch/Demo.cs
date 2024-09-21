@@ -19,6 +19,7 @@ namespace AdvancedCS.PatternMatching.EnhancedSwitch
             Console.WriteLine(ShapeToString(new Circle() { Radius = 8 }));
             Console.WriteLine(ShapeToString(new Circle() { Radius = 12 }));
             Console.WriteLine(ShapeToString(new Circle() { Radius = 25 }));
+            Console.WriteLine(ShapeToString(new Square() { Length = 10 }));
         }
     }
 }
